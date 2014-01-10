@@ -3,15 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<title>HCI Project Portfolio</title>
+	<style>
+	    #body { background: white; }
+	</style>
 </head>
 
-<body>
+<body id="body">
 	<!-- this is a comment in HTML -->
 	<h1>Ryan Chavez</h1> <!-- h1 through h5 are headers. The higher the number, the smaller the header -->
 	<h4>Project Portfolio</h4>
 
 	<!-- p means paragraph -->
-	<p>My name is Ryan Chavez and I am a ux designer and researcher.</p>
+	<p>My name is Ryan Chavez and I am a UX Designer and Researcher.</p>
 	<p>I am a student at the University of California, San Diego studying Human-Computer Interaction. I have spent time working for design firms, non-profits and programs. I design interfaces and interactions, evaluate usability, determine needs, apply art and science, gather data, and gather more data; all with the user at the center.</p>
 
 	<h4>Projects</h4>
@@ -21,5 +24,26 @@
 		<li>Prototyping</li>
 		<li>...</li>
 	</ol>
+	<h4><a target="#" href="http://ryanchavez.me">View the rest of my portolfio here!</a></h4>
+	<p>Or maybe you just want to view my projects right away. No shame. Straight to the point, I can appreciate that. <a target="#" href="http://acsweb.ucsd.edu/~r3chavez/#!experience/cm8a">Down the rabbit hole we go.</a></p>
+
+	<button type="button" onclick="randomcolor()">I heard you like raves! So I built you a rave button.</button>
+	<button type="button" onclick="reset()">Reset!</button>
+	<p id="color">This should change.</p>
+
+	<script>
+	function randomcolor() {
+		var hexcolor="#"+Math.floor(Math.random()*16777215).toString(16);
+		var RonPaul = "<img src='http://i0.kym-cdn.com/photos/images/original/000/242/631/"+ 382 + ".gif'>";
+		document.getElementById('body').style.background=hexcolor;
+		document.getElementById('color').innerHTML=RonPaul;
+	}
+	function reset() {
+		var NoMoreRon = "";
+		document.getElementById('body').style.background='white';
+		document.getElementById('color').innerHTML=NoMoreRon;
+	}
+	</script>
+
 </body>
 </html>
